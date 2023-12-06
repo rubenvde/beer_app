@@ -43,26 +43,26 @@ mixin _$BeerListCubitState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Beers value) beers,
-    required TResult Function(_Error value) error,
+    required TResult Function(BeerListCubitInitial value) initial,
+    required TResult Function(BeerListCubitLoading value) loading,
+    required TResult Function(BeerListCubitBeers value) beers,
+    required TResult Function(BeerListCubitError value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Beers value)? beers,
-    TResult? Function(_Error value)? error,
+    TResult? Function(BeerListCubitInitial value)? initial,
+    TResult? Function(BeerListCubitLoading value)? loading,
+    TResult? Function(BeerListCubitBeers value)? beers,
+    TResult? Function(BeerListCubitError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Beers value)? beers,
-    TResult Function(_Error value)? error,
+    TResult Function(BeerListCubitInitial value)? initial,
+    TResult Function(BeerListCubitLoading value)? loading,
+    TResult Function(BeerListCubitBeers value)? beers,
+    TResult Function(BeerListCubitError value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -87,25 +87,25 @@ class _$BeerListCubitStateCopyWithImpl<$Res, $Val extends BeerListCubitState>
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
+abstract class _$$BeerListCubitInitialImplCopyWith<$Res> {
+  factory _$$BeerListCubitInitialImplCopyWith(_$BeerListCubitInitialImpl value,
+          $Res Function(_$BeerListCubitInitialImpl) then) =
+      __$$BeerListCubitInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$BeerListCubitStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+class __$$BeerListCubitInitialImplCopyWithImpl<$Res>
+    extends _$BeerListCubitStateCopyWithImpl<$Res, _$BeerListCubitInitialImpl>
+    implements _$$BeerListCubitInitialImplCopyWith<$Res> {
+  __$$BeerListCubitInitialImplCopyWithImpl(_$BeerListCubitInitialImpl _value,
+      $Res Function(_$BeerListCubitInitialImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+class _$BeerListCubitInitialImpl implements BeerListCubitInitial {
+  const _$BeerListCubitInitialImpl();
 
   @override
   String toString() {
@@ -115,7 +115,8 @@ class _$InitialImpl implements _Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$BeerListCubitInitialImpl);
   }
 
   @override
@@ -161,10 +162,10 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Beers value) beers,
-    required TResult Function(_Error value) error,
+    required TResult Function(BeerListCubitInitial value) initial,
+    required TResult Function(BeerListCubitLoading value) loading,
+    required TResult Function(BeerListCubitBeers value) beers,
+    required TResult Function(BeerListCubitError value) error,
   }) {
     return initial(this);
   }
@@ -172,10 +173,10 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Beers value)? beers,
-    TResult? Function(_Error value)? error,
+    TResult? Function(BeerListCubitInitial value)? initial,
+    TResult? Function(BeerListCubitLoading value)? loading,
+    TResult? Function(BeerListCubitBeers value)? beers,
+    TResult? Function(BeerListCubitError value)? error,
   }) {
     return initial?.call(this);
   }
@@ -183,10 +184,10 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Beers value)? beers,
-    TResult Function(_Error value)? error,
+    TResult Function(BeerListCubitInitial value)? initial,
+    TResult Function(BeerListCubitLoading value)? loading,
+    TResult Function(BeerListCubitBeers value)? beers,
+    TResult Function(BeerListCubitError value)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -196,30 +197,30 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements BeerListCubitState {
-  const factory _Initial() = _$InitialImpl;
+abstract class BeerListCubitInitial implements BeerListCubitState {
+  const factory BeerListCubitInitial() = _$BeerListCubitInitialImpl;
 }
 
 /// @nodoc
-abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
-      __$$LoadingImplCopyWithImpl<$Res>;
+abstract class _$$BeerListCubitLoadingImplCopyWith<$Res> {
+  factory _$$BeerListCubitLoadingImplCopyWith(_$BeerListCubitLoadingImpl value,
+          $Res Function(_$BeerListCubitLoadingImpl) then) =
+      __$$BeerListCubitLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$BeerListCubitStateCopyWithImpl<$Res, _$LoadingImpl>
-    implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
+class __$$BeerListCubitLoadingImplCopyWithImpl<$Res>
+    extends _$BeerListCubitStateCopyWithImpl<$Res, _$BeerListCubitLoadingImpl>
+    implements _$$BeerListCubitLoadingImplCopyWith<$Res> {
+  __$$BeerListCubitLoadingImplCopyWithImpl(_$BeerListCubitLoadingImpl _value,
+      $Res Function(_$BeerListCubitLoadingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadingImpl implements _Loading {
-  const _$LoadingImpl();
+class _$BeerListCubitLoadingImpl implements BeerListCubitLoading {
+  const _$BeerListCubitLoadingImpl();
 
   @override
   String toString() {
@@ -229,7 +230,8 @@ class _$LoadingImpl implements _Loading {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$BeerListCubitLoadingImpl);
   }
 
   @override
@@ -275,10 +277,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Beers value) beers,
-    required TResult Function(_Error value) error,
+    required TResult Function(BeerListCubitInitial value) initial,
+    required TResult Function(BeerListCubitLoading value) loading,
+    required TResult Function(BeerListCubitBeers value) beers,
+    required TResult Function(BeerListCubitError value) error,
   }) {
     return loading(this);
   }
@@ -286,10 +288,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Beers value)? beers,
-    TResult? Function(_Error value)? error,
+    TResult? Function(BeerListCubitInitial value)? initial,
+    TResult? Function(BeerListCubitLoading value)? loading,
+    TResult? Function(BeerListCubitBeers value)? beers,
+    TResult? Function(BeerListCubitError value)? error,
   }) {
     return loading?.call(this);
   }
@@ -297,10 +299,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Beers value)? beers,
-    TResult Function(_Error value)? error,
+    TResult Function(BeerListCubitInitial value)? initial,
+    TResult Function(BeerListCubitLoading value)? loading,
+    TResult Function(BeerListCubitBeers value)? beers,
+    TResult Function(BeerListCubitError value)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -310,25 +312,25 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements BeerListCubitState {
-  const factory _Loading() = _$LoadingImpl;
+abstract class BeerListCubitLoading implements BeerListCubitState {
+  const factory BeerListCubitLoading() = _$BeerListCubitLoadingImpl;
 }
 
 /// @nodoc
-abstract class _$$BeersImplCopyWith<$Res> {
-  factory _$$BeersImplCopyWith(
-          _$BeersImpl value, $Res Function(_$BeersImpl) then) =
-      __$$BeersImplCopyWithImpl<$Res>;
+abstract class _$$BeerListCubitBeersImplCopyWith<$Res> {
+  factory _$$BeerListCubitBeersImplCopyWith(_$BeerListCubitBeersImpl value,
+          $Res Function(_$BeerListCubitBeersImpl) then) =
+      __$$BeerListCubitBeersImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<Beer> beers});
 }
 
 /// @nodoc
-class __$$BeersImplCopyWithImpl<$Res>
-    extends _$BeerListCubitStateCopyWithImpl<$Res, _$BeersImpl>
-    implements _$$BeersImplCopyWith<$Res> {
-  __$$BeersImplCopyWithImpl(
-      _$BeersImpl _value, $Res Function(_$BeersImpl) _then)
+class __$$BeerListCubitBeersImplCopyWithImpl<$Res>
+    extends _$BeerListCubitStateCopyWithImpl<$Res, _$BeerListCubitBeersImpl>
+    implements _$$BeerListCubitBeersImplCopyWith<$Res> {
+  __$$BeerListCubitBeersImplCopyWithImpl(_$BeerListCubitBeersImpl _value,
+      $Res Function(_$BeerListCubitBeersImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -336,7 +338,7 @@ class __$$BeersImplCopyWithImpl<$Res>
   $Res call({
     Object? beers = null,
   }) {
-    return _then(_$BeersImpl(
+    return _then(_$BeerListCubitBeersImpl(
       null == beers
           ? _value._beers
           : beers // ignore: cast_nullable_to_non_nullable
@@ -347,8 +349,8 @@ class __$$BeersImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$BeersImpl implements _Beers {
-  const _$BeersImpl(final List<Beer> beers) : _beers = beers;
+class _$BeerListCubitBeersImpl implements BeerListCubitBeers {
+  const _$BeerListCubitBeersImpl(final List<Beer> beers) : _beers = beers;
 
   final List<Beer> _beers;
   @override
@@ -367,7 +369,7 @@ class _$BeersImpl implements _Beers {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$BeersImpl &&
+            other is _$BeerListCubitBeersImpl &&
             const DeepCollectionEquality().equals(other._beers, _beers));
   }
 
@@ -378,8 +380,9 @@ class _$BeersImpl implements _Beers {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$BeersImplCopyWith<_$BeersImpl> get copyWith =>
-      __$$BeersImplCopyWithImpl<_$BeersImpl>(this, _$identity);
+  _$$BeerListCubitBeersImplCopyWith<_$BeerListCubitBeersImpl> get copyWith =>
+      __$$BeerListCubitBeersImplCopyWithImpl<_$BeerListCubitBeersImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -421,10 +424,10 @@ class _$BeersImpl implements _Beers {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Beers value) beers,
-    required TResult Function(_Error value) error,
+    required TResult Function(BeerListCubitInitial value) initial,
+    required TResult Function(BeerListCubitLoading value) loading,
+    required TResult Function(BeerListCubitBeers value) beers,
+    required TResult Function(BeerListCubitError value) error,
   }) {
     return beers(this);
   }
@@ -432,10 +435,10 @@ class _$BeersImpl implements _Beers {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Beers value)? beers,
-    TResult? Function(_Error value)? error,
+    TResult? Function(BeerListCubitInitial value)? initial,
+    TResult? Function(BeerListCubitLoading value)? loading,
+    TResult? Function(BeerListCubitBeers value)? beers,
+    TResult? Function(BeerListCubitError value)? error,
   }) {
     return beers?.call(this);
   }
@@ -443,10 +446,10 @@ class _$BeersImpl implements _Beers {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Beers value)? beers,
-    TResult Function(_Error value)? error,
+    TResult Function(BeerListCubitInitial value)? initial,
+    TResult Function(BeerListCubitLoading value)? loading,
+    TResult Function(BeerListCubitBeers value)? beers,
+    TResult Function(BeerListCubitError value)? error,
     required TResult orElse(),
   }) {
     if (beers != null) {
@@ -456,35 +459,36 @@ class _$BeersImpl implements _Beers {
   }
 }
 
-abstract class _Beers implements BeerListCubitState {
-  const factory _Beers(final List<Beer> beers) = _$BeersImpl;
+abstract class BeerListCubitBeers implements BeerListCubitState {
+  const factory BeerListCubitBeers(final List<Beer> beers) =
+      _$BeerListCubitBeersImpl;
 
   List<Beer> get beers;
   @JsonKey(ignore: true)
-  _$$BeersImplCopyWith<_$BeersImpl> get copyWith =>
+  _$$BeerListCubitBeersImplCopyWith<_$BeerListCubitBeersImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ErrorImplCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(
-          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
-      __$$ErrorImplCopyWithImpl<$Res>;
+abstract class _$$BeerListCubitErrorImplCopyWith<$Res> {
+  factory _$$BeerListCubitErrorImplCopyWith(_$BeerListCubitErrorImpl value,
+          $Res Function(_$BeerListCubitErrorImpl) then) =
+      __$$BeerListCubitErrorImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$BeerListCubitStateCopyWithImpl<$Res, _$ErrorImpl>
-    implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(
-      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
+class __$$BeerListCubitErrorImplCopyWithImpl<$Res>
+    extends _$BeerListCubitStateCopyWithImpl<$Res, _$BeerListCubitErrorImpl>
+    implements _$$BeerListCubitErrorImplCopyWith<$Res> {
+  __$$BeerListCubitErrorImplCopyWithImpl(_$BeerListCubitErrorImpl _value,
+      $Res Function(_$BeerListCubitErrorImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ErrorImpl implements _Error {
-  const _$ErrorImpl();
+class _$BeerListCubitErrorImpl implements BeerListCubitError {
+  const _$BeerListCubitErrorImpl();
 
   @override
   String toString() {
@@ -494,7 +498,7 @@ class _$ErrorImpl implements _Error {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ErrorImpl);
+        (other.runtimeType == runtimeType && other is _$BeerListCubitErrorImpl);
   }
 
   @override
@@ -540,10 +544,10 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Beers value) beers,
-    required TResult Function(_Error value) error,
+    required TResult Function(BeerListCubitInitial value) initial,
+    required TResult Function(BeerListCubitLoading value) loading,
+    required TResult Function(BeerListCubitBeers value) beers,
+    required TResult Function(BeerListCubitError value) error,
   }) {
     return error(this);
   }
@@ -551,10 +555,10 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Beers value)? beers,
-    TResult? Function(_Error value)? error,
+    TResult? Function(BeerListCubitInitial value)? initial,
+    TResult? Function(BeerListCubitLoading value)? loading,
+    TResult? Function(BeerListCubitBeers value)? beers,
+    TResult? Function(BeerListCubitError value)? error,
   }) {
     return error?.call(this);
   }
@@ -562,10 +566,10 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Beers value)? beers,
-    TResult Function(_Error value)? error,
+    TResult Function(BeerListCubitInitial value)? initial,
+    TResult Function(BeerListCubitLoading value)? loading,
+    TResult Function(BeerListCubitBeers value)? beers,
+    TResult Function(BeerListCubitError value)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -575,6 +579,6 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements BeerListCubitState {
-  const factory _Error() = _$ErrorImpl;
+abstract class BeerListCubitError implements BeerListCubitState {
+  const factory BeerListCubitError() = _$BeerListCubitErrorImpl;
 }

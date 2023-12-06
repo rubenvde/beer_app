@@ -5,29 +5,34 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'beer_list_cubit.freezed.dart';
 
-class BeerListCubitCubit extends Cubit<BeerListCubitState> {
-  BeerListCubitCubit({required this.beerRepository}) : super(const _Initial());
+class BeerListCubit extends Cubit<BeerListCubitState> {
+  BeerListCubit({required this.beerRepository})
+      : super(const BeerListCubitInitial());
 
   final BeerRepository beerRepository;
 
   Future<void> loadBeers() async {
-    if (state is _Initial) {
+    if (state is BeerListCubitInitial) {
       // Only emit loading state if we are in initial state
-      emit(const _Loading());
+      emit(const BeerListCubitLoading());
     }
     final beersResult = await beerRepository.fetchBeers();
     if (beersResult != null) {
-      emit(_Beers(beersResult.beers..sort((a, b) => a.name.compareTo(b.name))));
+      emit(
+        BeerListCubitBeers(
+          beersResult.beers..sort((a, b) => a.name.compareTo(b.name)),
+        ),
+      );
     } else {
-      emit(const _Error());
+      emit(const BeerListCubitError());
     }
   }
 }
 
 @freezed
 class BeerListCubitState with _$BeerListCubitState {
-  const factory BeerListCubitState.initial() = _Initial;
-  const factory BeerListCubitState.loading() = _Loading;
-  const factory BeerListCubitState.beers(List<Beer> beers) = _Beers;
-  const factory BeerListCubitState.error() = _Error;
+  const factory BeerListCubitState.initial() = BeerListCubitInitial;
+  const factory BeerListCubitState.loading() = BeerListCubitLoading;
+  const factory BeerListCubitState.beers(List<Beer> beers) = BeerListCubitBeers;
+  const factory BeerListCubitState.error() = BeerListCubitError;
 }

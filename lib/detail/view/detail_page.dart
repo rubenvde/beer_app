@@ -13,7 +13,7 @@ class DetailPage extends StatelessWidget {
   });
 
   final String beerId;
-  final BeerListCubitCubit beerListCubitCubit;
+  final BeerListCubit beerListCubitCubit;
 
   @override
   Widget build(BuildContext context) {

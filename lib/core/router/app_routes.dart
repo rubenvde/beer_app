@@ -26,7 +26,7 @@ class AppRoutes {
         if (state.extra == null) overview(routes: routes);
         return DetailPage(
           beerId: beerId!,
-          beerListCubitCubit: state.extra! as BeerListCubitCubit,
+          beerListCubitCubit: state.extra! as BeerListCubit,
         );
       },
       routes: routes,

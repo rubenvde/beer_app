@@ -18,7 +18,7 @@ class OverviewPage extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) =>
-              BeerListCubitCubit(beerRepository: context.read())..loadBeers(),
+              BeerListCubit(beerRepository: context.read())..loadBeers(),
         ),
         BlocProvider(
           create: (context) => BeerFilterCubit(),
@@ -41,7 +41,7 @@ class OverviewView extends StatelessWidget {
           l10n.overviewAppBarTitle,
         ),
       ),
-      body: BlocBuilder<BeerListCubitCubit, BeerListCubitState>(
+      body: BlocBuilder<BeerListCubit, BeerListCubitState>(
         builder: (context, listState) {
           return listState.maybeWhen(
             beers: (unfilteredBeers) {
@@ -81,7 +81,7 @@ class OverviewResultList extends StatelessWidget {
         unfilteredBeers: unfilteredBeers,
         child: (filteredBeers) {
           return RefreshIndicator(
-            onRefresh: () => context.read<BeerListCubitCubit>().loadBeers(),
+            onRefresh: () => context.read<BeerListCubit>().loadBeers(),
             child: ListView.builder(
               itemCount: filteredBeers.length,
               itemBuilder: (context, index) {
@@ -91,7 +91,7 @@ class OverviewResultList extends StatelessWidget {
                   onTap: () {
                     context.go(
                       '/detail/${beer.id}',
-                      extra: context.read<BeerListCubitCubit>(),
+                      extra: context.read<BeerListCubit>(),
                     );
                   },
                 );

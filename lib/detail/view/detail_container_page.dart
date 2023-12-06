@@ -63,7 +63,7 @@ class DetailContainerView extends StatelessWidget {
                 context.read<BeerRatingUpdateCubit>().updateRating(
                       rating.toInt(),
                     );
-                context.read<BeerListCubitCubit>().loadBeers();
+                context.read<BeerListCubit>().loadBeers();
               },
             );
           },
