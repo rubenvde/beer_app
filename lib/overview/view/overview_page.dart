@@ -1,4 +1,5 @@
 import 'package:beer_app/data/models/view/beer.dart';
+import 'package:beer_app/l10n/l10n.dart';
 import 'package:beer_app/overview/cubit/beer_filter_cubit.dart';
 import 'package:beer_app/overview/cubit/beer_list_cubit.dart';
 import 'package:beer_app/overview/view/overview_list_title.dart';
@@ -31,10 +32,11 @@ class OverviewView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Beer App',
+        title: Text(
+          l10n.overviewAppBarTitle,
         ),
       ),
       body: BlocBuilder<BeerListCubitCubit, BeerListCubitState>(
@@ -58,9 +60,10 @@ class OverviewView extends StatelessWidget {
                               return OverviewListTitle(
                                 beer: beer,
                                 onTap: () {
-                                  context.go('/detail/${beer.id}',
-                                      extra:
-                                          context.read<BeerListCubitCubit>());
+                                  context.go(
+                                    '/detail/${beer.id}',
+                                    extra: context.read<BeerListCubitCubit>(),
+                                  );
                                 },
                               );
                             },
@@ -94,19 +97,20 @@ class OverviewFilterSelection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return BlocBuilder<BeerFilterCubit, BeerFilterState>(
       builder: (context, state) {
         return SegmentedButton<BeerFilterEvent>(
-          segments: const <ButtonSegment<BeerFilterEvent>>[
+          segments: <ButtonSegment<BeerFilterEvent>>[
             ButtonSegment<BeerFilterEvent>(
               value: BeerFilterEvent.all,
-              label: Text('All'),
-              icon: Icon(Icons.list),
+              label: Text(l10n.overviewFilterSelectionAll),
+              icon: const Icon(Icons.list),
             ),
             ButtonSegment<BeerFilterEvent>(
               value: BeerFilterEvent.rated,
-              label: Text('Only rated'),
-              icon: Icon(Icons.rate_review),
+              label: Text(l10n.overviewFilterSelectionRatedOnly),
+              icon: const Icon(Icons.rate_review),
             ),
           ],
           selected: <BeerFilterEvent>{

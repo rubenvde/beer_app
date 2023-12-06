@@ -3,5 +3,10 @@
     "counterAppBarTitle": "Counter",
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
-    }
+    },
+    "overviewAppBarTitle": "Beer app",
+    "overviewFilterSelectionAll": "All",
+    "overviewFilterSelectionRatedOnly": "Rated only",
+    "overviewListTitleRatingTitle": "Rating",
+    "detailUnknownBeerAppBarTitle": "Beer"
 }

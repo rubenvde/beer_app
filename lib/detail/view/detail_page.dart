@@ -1,6 +1,7 @@
 import 'package:beer_app/data/models/view/beer.dart';
 import 'package:beer_app/detail/cubit/beer_details_cubit.dart';
 import 'package:beer_app/detail/cubit/beer_rating_update_cubit.dart';
+import 'package:beer_app/l10n/l10n.dart';
 import 'package:beer_app/overview/cubit/beer_list_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -36,6 +37,7 @@ class DetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return Scaffold(
       appBar: AppBar(
         title: BlocBuilder<BeerDetailsCubit, BeerDetailsState>(
@@ -43,7 +45,7 @@ class DetailView extends StatelessWidget {
             return Text(
               state.maybeMap(
                 result: (result) => result.beer.name,
-                orElse: () => 'Beer',
+                orElse: () => l10n.detailUnknownBeerAppBarTitle,
               ),
             );
           },
