@@ -48,17 +48,21 @@ class OverviewView extends StatelessWidget {
                     child: OverviewBeerFilter(
                       unfilteredBeers: unfilteredBeers,
                       child: (filteredBeers) {
-                        return ListView.builder(
-                          itemCount: filteredBeers.length,
-                          itemBuilder: (context, index) {
-                            final beer = filteredBeers[index];
-                            return OverviewListTitle(
-                              beer: beer,
-                              onTap: () {
-                                context.go('/detail/${beer.id}');
-                              },
-                            );
-                          },
+                        return RefreshIndicator(
+                          onRefresh: () =>
+                              context.read<BeerListCubitCubit>().loadBeers(),
+                          child: ListView.builder(
+                            itemCount: filteredBeers.length,
+                            itemBuilder: (context, index) {
+                              final beer = filteredBeers[index];
+                              return OverviewListTitle(
+                                beer: beer,
+                                onTap: () {
+                                  context.go('/detail/${beer.id}');
+                                },
+                              );
+                            },
+                          ),
                         );
                       },
                     ),

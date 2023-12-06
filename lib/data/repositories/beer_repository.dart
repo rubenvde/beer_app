@@ -7,4 +7,6 @@ class BeerRepository {
   final BeerService beerService;
   Future<BeersResult?> fetchBeers() => beerService.fetchBeers();
   Future<BeerResult?> fetchBeerById(String id) => beerService.fetchBeerById(id);
+  Future<void> updateRating(String id, int rating) =>
+      beerService.updateRating(id, rating);
 }

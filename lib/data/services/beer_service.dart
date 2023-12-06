@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:beer_app/core/network/network_client.dart';
-import 'package:beer_app/data/models/dto/beer_dto.dart';
 import 'package:beer_app/data/models/dto/beer_result_dto.dart';
 import 'package:beer_app/data/models/dto/beers_result_dto.dart';
 import 'package:beer_app/data/models/view/beer_result.dart';
@@ -31,6 +30,14 @@ class BeerService {
     } catch (e) {
       log(e.toString());
       return null;
+    }
+  }
+
+  Future<void> updateRating(String id, int rating) async {
+    try {
+      await networkClient.put('/beers/$id', {'rating': rating});
+    } catch (e) {
+      log(e.toString());
     }
   }
 }

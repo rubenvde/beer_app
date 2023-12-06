@@ -15,7 +15,7 @@ class NetworkClient {
     try {
       return await dio.get(url);
     } on DioException catch (_) {
-      rethrow; // TODO: Handle error
+      rethrow;
     }
   }
 
@@ -23,7 +23,15 @@ class NetworkClient {
     try {
       return await dio.post(url, data: data);
     } on DioException catch (_) {
-      rethrow; // TODO: Handle error
+      rethrow;
+    }
+  }
+
+  Future<Response<dynamic>> put(String url, dynamic data) async {
+    try {
+      return await dio.put(url, data: data);
+    } on DioException catch (_) {
+      rethrow;
     }
   }
 

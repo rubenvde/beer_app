@@ -12,23 +12,20 @@ _$LoginResultDTOImpl _$$LoginResultDTOImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$LoginResultDTOImplToJson(
-  _$LoginResultDTOImpl instance,
-) =>
+        _$LoginResultDTOImpl instance) =>
     <String, dynamic>{
       'data': instance.data,
     };
 
 _$LoginResultDataDTOImpl _$$LoginResultDataDTOImplFromJson(
-  Map<String, dynamic> json,
-) =>
+        Map<String, dynamic> json) =>
     _$LoginResultDataDTOImpl(
       accessToken: json['accessToken'] as String,
       refreshToken: json['refreshToken'] as String,
     );
 
 Map<String, dynamic> _$$LoginResultDataDTOImplToJson(
-  _$LoginResultDataDTOImpl instance,
-) =>
+        _$LoginResultDataDTOImpl instance) =>
     <String, dynamic>{
       'accessToken': instance.accessToken,
       'refreshToken': instance.refreshToken,
