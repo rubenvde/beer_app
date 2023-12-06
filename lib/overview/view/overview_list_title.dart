@@ -1,0 +1,38 @@
+import 'package:beer_app/data/models/view/beer.dart';
+import 'package:flutter/material.dart';
+
+class OverviewListTitle extends StatelessWidget {
+  const OverviewListTitle({required this.beer, super.key});
+
+  final Beer beer;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        child: Row(
+          children: [
+            Image.network(
+              beer.thumbImageUrl,
+              width: 50,
+              height: 50,
+            ),
+            const SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(beer.name),
+                  Text(beer.brewery.name),
+                ],
+              ),
+            ),
+            Text(beer.rating.toString()),
+          ],
+        ),
+      ),
+    );
+  }
+}
