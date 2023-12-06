@@ -17,8 +17,8 @@ class AppRouter {
         // Normally you would go to a seperate login screen
         // but we have the credentials hardcoded so let's try and login
         final isLoggedIn = await authRepository.login(
-          '*****',
-          '*****',
+          'star_developer@icapps.com',
+          'developer',
         );
         if (isLoggedIn) {
           return AppRoutes.overview().path;

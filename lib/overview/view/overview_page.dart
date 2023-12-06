@@ -4,6 +4,7 @@ import 'package:beer_app/overview/cubit/beer_list_cubit.dart';
 import 'package:beer_app/overview/view/overview_list_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class OverviewPage extends StatelessWidget {
   const OverviewPage({super.key});
@@ -51,7 +52,12 @@ class OverviewView extends StatelessWidget {
                           itemCount: filteredBeers.length,
                           itemBuilder: (context, index) {
                             final beer = filteredBeers[index];
-                            return OverviewListTitle(beer: beer);
+                            return OverviewListTitle(
+                              beer: beer,
+                              onTap: () {
+                                context.go('/detail/${beer.id}');
+                              },
+                            );
                           },
                         );
                       },
