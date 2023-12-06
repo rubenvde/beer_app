@@ -1,20 +1,31 @@
 import 'package:beer_app/data/models/view/beer.dart';
 import 'package:beer_app/detail/cubit/beer_details_cubit.dart';
 import 'package:beer_app/detail/cubit/beer_rating_update_cubit.dart';
+import 'package:beer_app/overview/cubit/beer_list_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class DetailPage extends StatelessWidget {
-  const DetailPage({required this.beerId, super.key});
+  const DetailPage({
+    required this.beerId,
+    required this.beerListCubitCubit,
+    super.key,
+  });
 
   final String beerId;
+  final BeerListCubitCubit beerListCubitCubit;
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => BeerDetailsCubit(beerRepository: context.read())
-        ..fetchBeerById(beerId),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => BeerDetailsCubit(beerRepository: context.read())
+            ..fetchBeerById(beerId),
+        ),
+        BlocProvider.value(value: beerListCubitCubit),
+      ],
       child: const DetailView(),
     );
   }
@@ -104,10 +115,12 @@ class DetailContainerView extends StatelessWidget {
                 Icons.star,
                 color: Colors.amber,
               ),
-              onRatingUpdate: (rating) =>
-                  context.read<BeerRatingUpdateCubit>().updateRating(
-                        rating.toInt(),
-                      ),
+              onRatingUpdate: (rating) {
+                context.read<BeerRatingUpdateCubit>().updateRating(
+                      rating.toInt(),
+                    );
+                context.read<BeerListCubitCubit>().loadBeers();
+              },
             );
           },
         ),

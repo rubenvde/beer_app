@@ -30,7 +30,12 @@ class OverviewListTitle extends StatelessWidget {
                 ],
               ),
             ),
-            Text(beer.rating.toString()),
+            Column(
+              children: [
+                const Text('Rating'),
+                Text(beer.rating.toString()),
+              ],
+            ),
           ],
         ),
       ),

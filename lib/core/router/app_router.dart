@@ -7,21 +7,27 @@ class AppRouter {
   AuthRepository authRepository;
   late final routerConfig = GoRouter(
     routes: [
-      AppRoutes.overview(),
+      AppRoutes.overview(
+        routes: [
+          AppRoutes.detail(),
+        ],
+      ),
       AppRoutes.loginError(),
     ],
     redirect: (context, state) async {
       if (await authRepository.isLoggedIn) {
-        return AppRoutes.overview().path;
+        // No redirect is needed
+        return null;
       } else {
         // Normally you would go to a seperate login screen
         // but we have the credentials hardcoded so let's try and login
         final isLoggedIn = await authRepository.login(
-          'star_developer@icapps.com',
-          'developer',
+          '*****',
+          '*****',
         );
         if (isLoggedIn) {
-          return AppRoutes.overview().path;
+          // No redirect is needed
+          return null;
         } else {
           return AppRoutes.loginError().path;
         }

@@ -11,10 +11,13 @@ class BeerListCubitCubit extends Cubit<BeerListCubitState> {
   final BeerRepository beerRepository;
 
   Future<void> loadBeers() async {
-    emit(const _Loading());
+    if (state is _Initial) {
+      // Only emit loading state if we are in initial state
+      emit(const _Loading());
+    }
     final beersResult = await beerRepository.fetchBeers();
     if (beersResult != null) {
-      emit(_Beers(beersResult.beers));
+      emit(_Beers(beersResult.beers..sort((a, b) => a.name.compareTo(b.name))));
     } else {
       emit(const _Error());
     }

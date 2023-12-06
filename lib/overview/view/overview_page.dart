@@ -58,7 +58,9 @@ class OverviewView extends StatelessWidget {
                               return OverviewListTitle(
                                 beer: beer,
                                 onTap: () {
-                                  context.go('/detail/${beer.id}');
+                                  context.go('/detail/${beer.id}',
+                                      extra:
+                                          context.read<BeerListCubitCubit>());
                                 },
                               );
                             },
