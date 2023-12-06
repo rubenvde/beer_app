@@ -16,6 +16,7 @@ class DependenciesWidget extends StatelessWidget {
   }) {
     authService = AuthService(networkClient: networkClient);
     sharedPreferencesService = SharedPreferencesService();
+    beerService = BeerService(networkClient: networkClient);
     // Add an authentication to the network client
     networkClient.addInterceptor(
       AuthInterceptor(
@@ -42,6 +43,9 @@ class DependenciesWidget extends StatelessWidget {
             authService: authService,
             sharedPreferencesService: sharedPreferencesService,
           ),
+        ),
+        RepositoryProvider(
+          create: (context) => BeerRepository(beerService: beerService),
         ),
       ],
       child: child,
