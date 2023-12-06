@@ -17,7 +17,6 @@ class AuthInterceptor {
           final accessToken = await sharedPreferencesService.getAccessToken();
           if (accessToken != null) {
             options.headers['Authorization'] = 'Bearer $accessToken';
-            print(accessToken);
           } else {
             // No token is available, so we continue the request
             // without access token
