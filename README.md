@@ -1,6 +1,5 @@
 # Beer App
 
-![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
 
@@ -11,6 +10,8 @@ A Flutter beer app code challenge
 ---
 
 ## Getting Started 🚀
+
+*In order to get this project working, you need to add the credentials in the app_router.dart file.*
 
 This project contains 3 flavors:
 
@@ -32,26 +33,6 @@ $ flutter run --flavor production --target lib/main_production.dart
 ```
 
 _\*Beer App works on iOS and Android_
-
----
-
-## Running Tests 🧪
-
-To run all unit and widget tests use the following command:
-
-```sh
-$ flutter test --coverage --test-randomize-ordering-seed random
-```
-
-To view the generated coverage report you can use [lcov](https://github.com/linux-test-project/lcov).
-
-```sh
-# Generate Coverage Report
-$ genhtml coverage/lcov.info -o coverage/
-
-# Open Coverage Report
-$ open coverage/index.html
-```
 
 ---
 
